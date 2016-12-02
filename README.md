@@ -1,4 +1,4 @@
-# talkterm
+# TalkTerm
 TalkTerm is a python class to simulate terminal-like interface. One can subclass TalkTerm to create a personalized interface.
 
 To test TalkTerm, you can run it without any argument by "python talkterm.py". In such a case, a TalkTerm class is created
