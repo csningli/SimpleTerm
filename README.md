@@ -6,7 +6,7 @@ and its "run" method is called. If everything correct, you will see
 
  TalkTerm v0.0 2016.01.01                                                                            
  copyright (c)                                                                                        
- ------------------------------------------------------------------------
+ -------------------------------
  [TalkTerm] >> 
 
 Type "help" and enter, it shows the help page.
