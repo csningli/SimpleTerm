@@ -1,8 +1,6 @@
 # talkterm
 TalkTerm is a python class to simulate terminal-like interface. One can subclass TalkTerm to create a personalized interface.
 
-Examples: 
-
 To test TalkTerm, you can run it without any argument by "python talkterm.py". In such a case, a TalkTerm class is created
 and its "run" method is called. If everything correct, you will see
 
@@ -12,4 +10,6 @@ and its "run" method is called. If everything correct, you will see
  [TalkTerm] >> 
 
 Type "help" and enter, it shows the help page.
+
+More examples to use TalkTerm can be found under /examples folder.
 
