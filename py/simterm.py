@@ -1,29 +1,31 @@
-##!/Users/ln/anaconda3/envs/abodel/bin python
 
-# talkterm.py
+# simterm.py
 # copyright 2016-2017, NiL, csningli@gmail.com
 
-import sys
+import sys, readline
+
+readline.parse_and_bind('tab: complete')
+readline.parse_and_bind('set editing-mode vi')
 
 class SimpleTerm :
     """ 
-    SimpleTerm is a terminal-like interface class. One can subclass \'SimpleTerm\' 
-    to create a personalized interface. 
+    SimpleTerm is a python class to simulate terminal-like interface. 
+    One can subclass \'SimpleTerm\' to create a personalized interface. 
     """
 
     _name_ = 'SimpleTerm'
     _version_ = 'v0.0'
     _date_ = '2016.01.01'
     _comment_ = 'copyright (c)' 
-
-    _width_ = 60
+    _reserved_ = ['run']
+    _width_ = 50
 
     def __init__(self) :  
         pass
 
     def test(self) :
         """
-        Test TalkTerm.
+        Test SimpleTerm.
         """
         print('Here is just a test.')
 
@@ -53,13 +55,13 @@ class SimpleTerm :
             elif cmd == 'quit' or cmd == 'q':
                 break
             act = getattr(self, cmd, None) 
-            if act is not None :
+            if act is not None and cmd not in self._reserved_ :
                 try :
                     act(*paras)
                 except Exception as e:
                     self.__println('Error in execution. %s' % e)
             else :
-                self.__println('Command is inavailable.')
+                self.__println('Command is inavailable or reserved.')
 
         self.__printsep()
         self.__println('Quit.')
@@ -117,10 +119,9 @@ class SimpleTerm :
             if len(subtopics) > 0 :
                 self.__printsep()
                 for a in subtopics :
-                    if len(a) > 2 and a[:2] != '__' and a[:3] != 'im_':
+                    if len(a) > 2 and a[:2] != '__' and a[:3] != 'im_' and a not in self._reserved_ :
                         doc = getattr(fa, a).__doc__
-                        if doc is not None :
-                            self.__printll(a, doc)
+                        self.__printll(a, doc)
         else :
             self.__println('Invalid argument for help.')
         
