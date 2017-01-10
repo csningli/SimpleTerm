@@ -5,13 +5,13 @@
 
 import sys
 
-class TalkTerm :
+class SimpleTerm :
     """ 
-    TalkTerm is a terminal-like interface class. One can subclass \'TalkTerm\' 
+    SimpleTerm is a terminal-like interface class. One can subclass \'SimpleTerm\' 
     to create a personalized interface. 
     """
 
-    _name_ = 'TalkTerm'
+    _name_ = 'SimpleTerm'
     _version_ = 'v0.0'
     _date_ = '2016.01.01'
     _comment_ = 'copyright (c)' 
@@ -125,7 +125,7 @@ class TalkTerm :
             self.__println('Invalid argument for help.')
         
 if __name__ == '__main__' :
-    t = TalkTerm()
+    t = SimpleTerm()
     t.run()
 
 
