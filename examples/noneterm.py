@@ -2,9 +2,9 @@
 import sys 
 sys.path.append('../py')
 
-import talkterm 
+from simterm import SimpleTerm
 
-class NoneTerm(talkterm.TalkTerm) :
+class NoneTerm(SimpleTerm) :
     _name_ = 'NoneTerm'
     _version_ = 'v0'
     _comment_ = 'copyright (c) Nothing at all'
