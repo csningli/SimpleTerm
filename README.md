@@ -4,7 +4,7 @@ One can subclass TalkTerm to create a personalized interface.
 
 To test TalkTerm, you can run it without any argument by 
 
-	python talkterm.py 
+	$ python talkterm.py 
 
 In such a case, a TalkTerm class is created
 and its "run" method is called. If everything correct, you will see something like
