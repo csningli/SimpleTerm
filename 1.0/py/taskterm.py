@@ -1,5 +1,5 @@
 
-# simterm.py
+# taskterm.py
 # copyright 2016-2017, NiL, csningli@gmail.com
 
 import sys, readline
@@ -7,15 +7,15 @@ import sys, readline
 readline.parse_and_bind('tab: complete')
 readline.parse_and_bind('set editing-mode vi')
 
-class SimpleTerm :
+class TaskTerm :
     """ 
-    SimpleTerm is a python class to simulate terminal-like interface. 
-    One can subclass \'SimpleTerm\' to create a personalized interface. 
+    TaskTerm is a python class to simulate terminal-like interface. 
+    One can subclass \'TaskTerm\' to create a personalized interface. 
     """
 
-    _name_ = 'SimpleTerm'
+    _name_ = 'TaskTerm'
     _version_ = 'v0.0'
-    _date_ = '2016.01.01'
+    _date_ = '2017.07.06'
     _comment_ = 'copyright (c)' 
     _reserved_ = ['run']
     _width_ = 50
@@ -25,7 +25,7 @@ class SimpleTerm :
 
     def test(self) :
         """
-        Test SimpleTerm.
+        Test TaskTerm.
         """
         print('Here is just a test.')
 
@@ -122,11 +122,12 @@ class SimpleTerm :
                     if len(a) > 2 and a[:2] != '__' and a[:3] != 'im_' and a not in self._reserved_ :
                         doc = getattr(fa, a).__doc__
                         self.__printll(a, doc)
+            self.__printll("quit", "Quit.")
         else :
             self.__println('Invalid argument for help.')
         
 if __name__ == '__main__' :
-    t = SimpleTerm()
+    t = TaskTerm()
     t.run()
 
 

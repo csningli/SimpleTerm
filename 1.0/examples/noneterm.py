@@ -2,12 +2,12 @@
 import sys 
 sys.path.append('../py')
 
-from simterm import SimpleTerm
+from taskterm import TaskTerm
 
-class NoneTerm(SimpleTerm) :
+class NoneTerm(TaskTerm) :
     _name_ = 'NoneTerm'
     _version_ = 'v0'
-    _comment_ = 'copyright (c) Nothing at all'
+    _comment_ = 'copyright (c) Nothing at all.'
 
     def none(self) :
         """
