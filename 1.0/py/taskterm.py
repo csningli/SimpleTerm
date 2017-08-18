@@ -7,7 +7,7 @@ import sys, readline
 readline.parse_and_bind('tab: complete')
 readline.parse_and_bind('set editing-mode vi')
 
-class TaskTerm :
+class TaskTerm(object) :
     """ 
     TaskTerm is a python class to simulate terminal-like interface. 
     One can subclass \'TaskTerm\' to create a personalized interface. 
