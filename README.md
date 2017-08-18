@@ -9,7 +9,7 @@ To test SimpleTerm, you can run it without any argument by
 In such a case, a TaskTerm class is created and its "run" method is called. 
 If everything correct, you will see something like
 
-	SimpleTerm v0.0 2016.01.01
+	TaskTerm v0.0 2016.01.01
 	copyright (c)
 	-------------------------------------------
 	[TaskTerm] >>
